@@ -21,6 +21,7 @@ Django_Web_Server
          自己写一个新的笔记
          修改以前的笔记
          删除笔记
+         
     - 模型类
     
         class User(models.Model):

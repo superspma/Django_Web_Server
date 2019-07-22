@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+    {% if 'user' in request.session %}
+        <h1>欢迎:{{ request.session.user.name }}</h1>
+        <a href="/user/logout">退出登录</a>
+    {% else %}
+        <a href="/user/login">登录</a>
+        <a href="/user/reg">注册</a>
+    {% endif %}
+    {% if 'user' in request.session  %}
+        <div>
+            <a href="/note/">进入我的云笔记</a>
+            <div>
+                <img src="/static/files/timg.jpeg" alt="美女图片"
+                 style="width:300px;">
+            </div>
+
+        </div>
+    {% endif %}
+</body>
+</html>

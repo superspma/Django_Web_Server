@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的云笔记</title>
+</head>
+<body>
+<H2>
+    {{ request.session.user.name }} 的笔记
+</H2>
+<h4>
+    <a href="/note/add">添加新笔记</a>
+    <a href="/">返回首页</a>
+</h4>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>标题</th>
+        <th>创建时间</th>
+        <th>修改时间</th>
+        <th>修改</th>
+        <th>删除</th>
+    </tr>
+    {% for note in page.object_list %}
+    <tr>
+        <td>{{ note.id }}</td>
+        <td>{{ note.title }}</td>
+        <td>{{ note.create_time }}</td>
+        <td>{{ note.mod_time }}</td>
+        <td>
+            <a href="/note/mod/{{note.id}}">修改</a>
+        </td>
+        <td>
+            <a href="/note/del/{{note.id}}">删除</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+{# 分页功能 #}
+{# 上一页功能 #}
+{% if page.has_previous %}
+    <a href="/note/?page={{ page.previous_page_number }}">上一页</a>
+{% else %}
+    上一页
+{% endif %}
+
+{# 此处显示页码信息 #}
+{% for n in paginator.page_range %}
+    {% if n == page.number %}
+    {{ n }}
+    {% else %}
+        <a href="/note/?page={{ n }}">{{ n }}</a>&nbsp;
+    {% endif %}
+{% endfor %}
+
+{# 下一页功能 #}
+{% if page.has_next %}
+<a href="/note/?page={{ page.next_page_number }}">下一页</a>
+{% else %}
+下一页
+{% endif %}
+
+
+
+</body>
+</html>

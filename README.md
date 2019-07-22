@@ -28,13 +28,20 @@ Django_Web_Server
             user = models.ForeignKey(User)   # 关联用户外键
             create_time = models.DateField(...)  # 创建时间
             mod_time = models.DateField(...)  # 修改时间
-    - 参考:
-        - 主页面
-        ![主页面](./static/files/1.png)
-        - 注册界面
-        ![注册页面](./static/files/3.png)
-        - 登陆界面
-        ![登录页面](./static/files/2.png)
-        - 云笔记页面
-        ![云笔记页面](./static/files/4.png)
-        
+ 
+ 
+ >>参考:
+    
+    
+主页面
+![主页面](./static/files/1.png)
+
+ 注册界面
+![注册页面](./static/files/3.png)
+
+ 登陆界面
+![登录页面](./static/files/2.png)
+
+ 云笔记页面
+![云笔记页面](./static/files/4.png)
+    

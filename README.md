@@ -12,7 +12,9 @@ Django_Web_Server
 
 
 实现网络云笔记
+
     - 功能:
+    
          注册
          登陆
          查看以前自己的笔记
@@ -20,6 +22,7 @@ Django_Web_Server
          修改以前的笔记
          删除笔记
     - 模型类
+    
         class User(models.Model):
             ...
         class Note(models.Model)：

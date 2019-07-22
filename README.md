@@ -30,18 +30,22 @@ Django_Web_Server
             mod_time = models.DateField(...)  # 修改时间
  
  
- >>参考:
+ >参考:
     
     
-主页面
+>>主页面
+
 ![主页面](./static/files/1.png)
 
- 注册界面
+ >>注册界面
+ 
 ![注册页面](./static/files/3.png)
 
- 登陆界面
+ >>登陆界面
+ 
 ![登录页面](./static/files/2.png)
 
- 云笔记页面
+ >>云笔记页面
+ 
 ![云笔记页面](./static/files/4.png)
     
